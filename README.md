@@ -1,10 +1,4 @@
-# Welcome to your CDK Java project!
-
-This is a blank project for Java development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
+# CDK for Confluence sServer ECS
 
 ## Useful commands
 
@@ -15,4 +9,9 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
-Enjoy!
+## Required Env locally
+
+Refer to [AWS CDK Toolkit (cdk command)](https://docs.aws.amazon.com/cdk/latest/guide/cli.html)
+1. install nodejs (better to use the latest stable one)
+2. install AWS CDK `npm install -g aws-cdk`
+3. configure your aws token locally by using aws cli

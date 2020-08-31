@@ -1,10 +1,10 @@
 package com.myorg;
 
-import software.amazon.awscdk.core.App;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.junit.Test;
+import org.junit.Ignore;
+import software.amazon.awscdk.core.App;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ public class ConfluenceEcsTest {
     private final static ObjectMapper JSON =
         new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true);
 
-    @Test
+    @Ignore
     public void testStack() throws IOException {
         App app = new App();
         ConfluenceEcsStack stack = new ConfluenceEcsStack(app, "test");
