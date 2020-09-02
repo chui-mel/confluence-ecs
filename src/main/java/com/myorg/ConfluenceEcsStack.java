@@ -27,7 +27,7 @@ public class ConfluenceEcsStack extends Stack {
 
         SecurityGroup securityGroup = SecurityGroup.Builder.create(this, "ingress-sg")
             .vpc(vpc)
-            .allowAllOutbound(false)
+            .allowAllOutbound(true)
             .build();
 
         securityGroup.addIngressRule(Peer.anyIpv4(), Port.tcp(8090));
@@ -59,6 +59,7 @@ public class ConfluenceEcsStack extends Stack {
 
         FargateService.Builder.create(this, "ConfluenceTestService")
             .cluster(cluster)
+            .securityGroups(List.of(securityGroup))
             .taskDefinition(taskDefinition)
             .desiredCount(1)
             .assignPublicIp(true)
