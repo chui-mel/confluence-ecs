@@ -1,0 +1,17 @@
+version: '3'
+services:
+  confluence772:
+    image: atlassian/confluence-server:7.7.2
+    volumes:
+      - .data/confluence772:/var/atlassian/application-data/confluence
+    ports:
+      - "8090:8090"
+      - "8091:8091"
+
+  confluence773:
+    image: atlassian/confluence-server:7.7.3
+    volumes:
+      - .data/confluence773:/var/atlassian/application-data/confluence
+    ports:
+      - "18090:8090"
+      - "18091:8091"
